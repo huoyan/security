@@ -1,8 +1,8 @@
 package com.zxp.security.config;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+        import org.springframework.context.annotation.Configuration;
+        import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+        import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * 作者 zxp

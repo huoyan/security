@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -38,6 +39,9 @@ public class CustomUserService implements UserDetailsService {
         role.setId(1);
         roles.add(role);
         user.setRoles(roles);
+        BCryptPasswordEncoder cryptPasswordEncoder =  new BCryptPasswordEncoder(9);
+        String jj = cryptPasswordEncoder.encode(user.getPassword());
+        user.setPassword(jj);
         System.out.println("s:"+s);
         System.out.println("username:"+user.getUsername()+";password:"+user.getPassword());
         return user;
